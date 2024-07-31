@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Add some styles for the hamburger menu */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu ul li {
+            margin: 0 15px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu.active {
+                display: block;
+            }
+
+            .menu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">BMW</h2>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">MODELS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Search...">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div> 
+        <div class="content">
+            <h1>Explore<br><span>BMW Cars</span></h1>
+            <p class="par">
+                Discover the elegance and performance of BMW cars. From luxury sedans to powerful SUVs,
+                BMW offers a range of vehicles that combine cutting-edge technology with iconic design.
+                Explore our latest models and find the perfect BMW for you.
+            </p>
+
+            <button class="cn"><a href="#">Explore Models</a></button>
+
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fas fa-car"></i>
+                    <h3>Wide Range of Models</h3>
+                    <p>Explore various models including sedans, SUVs, and electric vehicles.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Advanced Technology</h3>
+                    <p>Experience BMW's latest technological innovations for comfort and safety.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Presence</h3>
+                    <p>Learn about BMW's global network and presence in over 140 countries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2></h2>
+            </div>
+            <div class="footer-menu">
+                <center>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sitemap</a>
+                </center>
+            </div>
+            <div class="social-icons">
+                <center>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                </center>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BMW. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
